@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" xmlns:controls="clr-namespace:YoutuberTrack.Users.Controls" prism:ViewModelLocator.AutowireViewModel="True" x:Class="YoutuberTrack.Users.Components.Login.LoginPage" Title="{Binding Title}">
+    <ContentPage.Content>
+        <Grid Padding="0" RowSpacing="0" ColumnSpacing="0">
+            <controls:Video x:Name="video" Source="Videos/login_bg_video.mp4" Loop="false" HorizontalOptions="Fill" VerticalOptions="Fill" />
+            <BoxView HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="#000000" Opacity="0.7">
+            </BoxView>
+            <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="20,10,10,20">
+                <Entry Placeholder="username" FontSize="{StaticResource MidMediumSize}" TextColor="#495057" HeightRequest="40">
+                    <Entry.PlaceholderColor>
+                        <OnPlatform x:TypeArguments="Color" Android="Silver" />
+                    </Entry.PlaceholderColor>
+                    <Entry.TextColor>
+                        <OnPlatform x:TypeArguments="Color" Android="White" />
+                    </Entry.TextColor>
+                </Entry>
+                <Entry Placeholder="password" FontSize="{StaticResource MidMediumSize}" TextColor="#495057" HeightRequest="40" IsPassword="true">
+                    <Entry.PlaceholderColor>
+                        <OnPlatform x:TypeArguments="Color" Android="Silver" />
+                    </Entry.PlaceholderColor>
+                    <Entry.TextColor>
+                        <OnPlatform x:TypeArguments="Color" Android="White" />
+                    </Entry.TextColor>
+                </Entry>
+                <Button Text="Login" BackgroundColor="#ec536c" TextColor="#FFFFFF" FontSize="Large" />
+                <Label HorizontalTextAlignment="Center" TextColor="#989DAF" Text="---- OR CONNECT WITH ----" FontSize="{StaticResource MidLittleSize}" Margin="0,10,0,10"/>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Orientation="Horizontal" Padding="20,10,10,20">
+                    <Button Text="FACEBOOK" BackgroundColor="#3B5998" TextColor="#FFFFFF"  HorizontalOptions="FillAndExpand"/>
+                    <BoxView WidthRequest="5" HeightRequest="5"></BoxView>
+                    <Button Text="GOOGLE" BackgroundColor="#ea4335" TextColor="#FFFFFF" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
